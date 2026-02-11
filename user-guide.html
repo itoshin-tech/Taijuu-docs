@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使い方ガイド - シンプル体重管理アプリ</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 40px;
+            padding: 10px 0;
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .feature-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .step {
+            background-color: #e8f5e8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .step-number {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .tip {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .tip-title {
+            font-weight: bold;
+            color: #856404;
+        }
+
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #888;
+            border: 2px dashed #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← トップページに戻る</a>
+
+        <h1>📖 基本的な使い方</h1>
+
+        <h2>体重の記録方法</h2>
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>体重を入力</strong><br>
+            ホーム画面の入力欄をタップし、ドラムロールまたはキーパッドで今日の体重を入力します。
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>イベントスタンプを活用</strong><br>
+            「食べ過ぎ」「運動」「飲み会」などのスタンプをタップして、その日の出来事を記録できます。体重増減の原因が一目で分かります。
+        </div>
+
+        <div class="screenshot-placeholder">
+            [入力画面のスクリーンショットをここに配置]
+        </div>
+
+        <h2>グラフで推移を確認</h2>
+        <p>記録したデータは自動的にグラフ化されます。</p>
+        <ul>
+            <li><strong>ズーム操作：</strong> グラフをピンチイン・ピンチアウトして、表示期間を調整できます。</li>
+            <li><strong>目標ライン：</strong> 設定した目標体重が点線で表示されるので、進捗が一目で分かります。</li>
+        </ul>
+
+        <h2>カレンダー機能</h2>
+        <p>カレンダー画面では、月ごとの記録状況を確認できます。</p>
+        <ul>
+            <li>日付をタップすると、その日の記録を修正できます。</li>
+            <li>スタンプが表示されるので、生活習慣と体重の関係を振り返るのに便利です。</li>
+        </ul>
+
+        <h1>⚙️ データ管理と設定</h1>
+
+        <h2>Pro版（有料機能）について</h2>
+        <div class="feature-box">
+            <strong>Pro版の特典</strong><br>
+            <ul>
+                <li>広告の非表示</li>
+                <li>データのインポート・エクスポート（バックアップ・機種変更用）</li>
+            </ul>
+        </div>
+
+        <h2>機種変更時のデータ移行</h2>
+        <ol>
+            <li>旧端末で「設定」→「データをエクスポート」を選択し、CSVファイルを保存します。</li>
+            <li>新端末にファイルを移動し、「データをインポート」から読み込みます。</li>
+        </ol>
+
+        <div class="tip">
+            <div class="tip-title">💡 注意</div>
+            インポート機能を使用すると、現在のデータは上書きされますのでご注意ください。
+        </div>
+    </div>
+</body>
+
+</html>
