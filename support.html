@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サポート - シンプル体重管理アプリ</title>
+    <title>よくある質問（FAQ） - DietGraph</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.8;
             margin: 0;
             padding: 20px;
-            background-color: #f5f5f5;
+            background-color: #f0f4ff;
+            color: #333;
         }
 
         .container {
@@ -19,39 +20,71 @@
             margin: 0 auto;
             padding: 30px;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 100, 0.1);
+            border-radius: 12px;
         }
 
         h1 {
-            color: #4CAF50;
-            border-bottom: 3px solid #4CAF50;
+            color: #1565C0;
+            border-bottom: 3px solid #42A5F5;
             padding-bottom: 10px;
         }
 
         h2 {
-            color: #333;
-            margin-top: 30px;
-            border-left: 4px solid #4CAF50;
+            color: #1565C0;
+            margin-top: 36px;
+            font-size: 1.1em;
+            border-left: 4px solid #42A5F5;
             padding-left: 10px;
         }
 
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
-            color: #4CAF50;
+            color: #1565C0;
             text-decoration: none;
+            font-size: 0.9em;
         }
 
         .back-link:hover {
             text-decoration: underline;
         }
 
-        .contact-info {
-            background-color: #f9f9f9;
-            padding: 20px;
+        .faq-item {
+            background-color: #f8faff;
+            border: 1px solid #dde8ff;
             border-radius: 8px;
-            margin-top: 20px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item .question {
+            font-weight: bold;
+            color: #1565C0;
+            margin-bottom: 8px;
+        }
+
+        .faq-item ol {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+
+        .contact-box {
+            background-color: #f0f4ff;
+            border: 1px solid #c5d8ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 32px;
+        }
+
+        .contact-box a {
+            color: #1565C0;
+        }
+
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 8px;
         }
     </style>
 </head>
@@ -60,30 +93,84 @@
     <div class="container">
         <a href="index.html" class="back-link">← トップページに戻る</a>
 
-        <h1>サポート・お問い合わせ</h1>
+        <h1>よくある質問（FAQ）</h1>
+        <p>「DietGraph」についてよくいただくご質問をまとめました。</p>
 
-        <p>「シンプル体重管理アプリ」をご利用いただきありがとうございます。<br>
-            不具合の報告、機能のご要望、その他ご質問などがございましたら、以下の方法でお問い合わせください。</p>
+        <h2>基本的な使い方</h2>
 
-        <h2>よくある質問（FAQ）</h2>
+        <div class="faq-item">
+            <div class="question">Q. 体重はどこから入力しますか？</div>
+            <p>A. 下部メニューの「入力」タブから入力できます。ドラムロール（スクロール）で体重を選択し、「保存」ボタンを押してください。</p>
+        </div>
 
-        <h3>Q. 機種変更時のデータ移行方法は？</h3>
-        <p>A. 以下の手順で移行が可能です。</p>
-        <ol>
-            <li>旧端末で「設定」→「データをエクスポート」を選択し、バックアップファイル（CSV）を作成・保存してください。</li>
-            <li>作成したCSVファイルを新端末に移動させてください（Google Driveやメール等を利用）。</li>
-            <li>新端末でアプリを起動し、「設定」→「データをインポート」からCSVファイルを選択してください。</li>
-            <li>※この機能を利用するにはPro版へのアップグレードが必要です。</li>
-        </ol>
+        <div class="faq-item">
+            <div class="question">Q. 上限体重・目標体重の意味は？</div>
+            <p>A. グラフとカレンダーの色分けに使われます。</p>
+            <ul>
+                <li>体重が<strong>上限体重を超える</strong>と赤色で表示されます</li>
+                <li>体重が<strong>目標体重以下</strong>になると青色で表示されます</li>
+                <li>その間の体重は黄色で表示されます</li>
+            </ul>
+            <p>グラフ画面のラインを上下にドラッグして変更できます。</p>
+        </div>
 
-        <h3>Q. 広告を消したいです。</h3>
-        <p>A. 「設定」画面から「Pro版にアップグレード」を購入いただくことで、広告が非表示になります。</p>
+        <div class="faq-item">
+            <div class="question">Q. イベントとは何ですか？</div>
+            <p>A. 体重に関係するできごと（食事・運動など）を記録する機能です。設定からアイコンと名前をカスタマイズできます。入力画面でイベントを選択すると、グラフにも表示されます。</p>
+        </div>
 
-        <h2>お問い合わせ先</h2>
-        <div class="contact-info">
-            <p>開発者へのご連絡は、以下のメールアドレスまでお願いいたします。</p>
-            <p><strong>メール:</strong> <a href="mailto:support@example.com">support@example.com</a></p>
-            <p>※お問い合わせの際は、ご利用の端末名、OSバージョン、アプリのバージョンを記載していただくとスムーズです。</p>
+        <h2>データ管理</h2>
+
+        <div class="faq-item">
+            <div class="question">Q. 機種変更時のデータ移行方法は？</div>
+            <p>A. Pro版のバックアップ機能を使って移行できます。</p>
+            <ol>
+                <li>旧端末で「設定」→「データをバックアップ」を選択し、CSVファイルを保存</li>
+                <li>CSVファイルを新端末に移動（Google Driveやメール等を利用）</li>
+                <li>新端末でアプリを起動し、「設定」→「バックアップから復元」でCSVを選択</li>
+            </ol>
+            <p class="note">※ この機能はPro版が必要です。</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q. データを誤って消してしまいました。</div>
+            <p>A. 「全データを消去」を実行した場合、復元はできません。大切なデータは定期的にバックアップすることをおすすめします（Pro版機能）。</p>
+        </div>
+
+        <h2>Pro版について</h2>
+
+        <div class="faq-item">
+            <div class="question">Q. Pro版にするとどんな機能が使えますか？</div>
+            <p>A. 以下の機能が利用できます。</p>
+            <ul>
+                <li>広告の完全非表示</li>
+                <li>データのバックアップ（CSV書き出し）</li>
+                <li>バックアップからの復元（CSV読み込み）</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q. Pro版はどこから購入できますか？</div>
+            <p>A. アプリの「設定」画面→「広告を消す」からアップグレードできます。買い切り型で、一度購入すると永久に使えます。</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q. Pro版を機種変更後も使えますか？</div>
+            <p>A. はい。「設定」画面→「購入を復元する」をタップすることで、同じGoogleアカウントで購入を引き継げます。</p>
+        </div>
+
+        <h2>その他</h2>
+
+        <div class="faq-item">
+            <div class="question">Q. 上記以外の質問・不具合報告はどこにすればよいですか？</div>
+            <p>A. 下記のメールアドレスまでお問い合わせください。</p>
+        </div>
+
+        <div class="contact-box">
+            <p><strong>お問い合わせ先：</strong><br>
+                <a href="mailto:support@shonancraft.club">support@shonancraft.club</a>
+            </p>
+            <p class="note">※ お問い合わせの際は、端末名・OSバージョン・アプリバージョンを記載いただけるとスムーズです。</p>
         </div>
     </div>
 </body>
