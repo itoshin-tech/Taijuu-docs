@@ -1,16 +1,25 @@
-# PlotLog - Android デプロイガイド (Windows版)
+# DietGraph - Android デプロイガイド (Windows版)
 
-このガイドは、Windows 環境で `PlotLog` を Google Play Store に公開するための手順書です。
+このガイドは、Windows 環境で `DietGraph` を Google Play Store に公開するための手順書です。
 
 ## 1. アプリ基本情報の決定
 
-まず、以下の情報を確定させる必要があります。特に **Application ID** は一度決めると変更できないため重要です。
+### 開発者アカウント情報
 
-| 項目 | 設定値（例） | 備考 |
+| 項目 | 値 |
+|---|---|
+| **Google Play 開発者名** | Shonan Craft Club |
+| **アカウント ID** | 8234857728229829821 |
+
+### アプリ情報
+
+特に **Application ID** は一度決めると変更できないため重要です。
+
+| 項目 | 設定値 | 備考 |
 |---|---|---|
-| **アプリ名** | PlotLog | ホーム画面に表示される名前 (設定済) |
-| **ストア表示名** | PlotLog - イベントも記録できる体重管理アプリ | Play Store 上での名前 |
-| **Application ID** | **com.yourname.plotlog** (例) | **必須変更**。`com.example` は使用不可。世界中で一意である必要があります。 |
+| **アプリ名** | DietGraph | ホーム画面に表示される名前 (設定済) |
+| **ストア表示名** | DietGraph - グラフにこだわった体重管理アプリ | Play Store 上での名前 |
+| **Application ID** | **com.shonancraft.dietgraph** | `com.example` から変更済みであること |
 | **バージョン** | 1.0.0+1 | `pubspec.yaml` で管理 |
 
 ---
@@ -21,13 +30,13 @@
 
 ### 2-1. Application ID の変更
 
-`com.example` ドメインはストアで使用できません。独自のドメイン（例: `com.studio.plotlog`）に変更します。
+`com.example` ドメインはストアで使用できません。独自のドメイン（例: `com.studio.dietgraph`）に変更します。
 
 1.  **build.gradleの設定**:
     `android/app/build.gradle.kts` を開き、`applicationId` を変更します。
     ```kotlin
     defaultConfig {
-        applicationId = "com.studio.plotlog" // ← ここを変更！
+        applicationId = "com.studio.dietgraph" // ← ここを変更！
         // ...
     }
     ```
@@ -35,9 +44,9 @@
 2.  **パッケージ名の変更**:
     Android ではフォルダ構成とパッケージ名が一致している必要があります。
     *   `android/app/src/main/kotlin/com/example/p29_taijuu_flutter/MainActivity.kt` を開きます。
-    *   1行目の `package com.example.p29_taijuu_flutter` を `package com.studio.plotlog` に変更します。
+    *   1行目の `package com.example.p29_taijuu_flutter` を `package com.studio.dietgraph` に変更します。
     *   フォルダ構成を変更します:
-        *   `android/app/src/main/kotlin/com/studio/plotlog/MainActivity.kt` となるようフォルダを作成・移動し、古い `example` フォルダは削除します。
+        *   `android/app/src/main/kotlin/com/studio/dietgraph/MainActivity.kt` となるようフォルダを作成・移動し、古い `example` フォルダは削除します。
 
 3.  **AndroidManifest.xmlの確認**:
     `android/app/src/main/AndroidManifest.xml` に `package="com.example..."` という記述がある場合は削除するか、新しいIDに合わせてください（最近のFlutterプロジェクトでは不要な場合もありますが、確認してください）。
@@ -104,7 +113,7 @@ flutter build appbundle --release
 
 ### ストアの掲載情報
 
-*   **アプリ名**: `PlotLog - イベントも記録できる体重管理アプリ` (30文字以内)
+*   **アプリ名**: `DietGraph - グラフが見やすい体重管理アプリ` (30文字以内)
 *   **簡単な説明** (80文字以内):
     > イベントも記録できる、シンプルで高機能な体重管理アプリ。カレンダーとグラフで変化を一目で把握。
 *   **詳しい説明** (4000文字以内):
