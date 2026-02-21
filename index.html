@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シンプル体重管理アプリ</title>
+    <title>DietGraph - グラフにこだわった体重管理アプリ</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -12,11 +12,11 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f0f4ff;
         }
 
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, #1565C0, #42A5F5);
             color: white;
             text-align: center;
             padding: 60px 20px;
@@ -49,22 +49,23 @@
             background: white;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 100, 0.08);
             text-decoration: none;
             color: inherit;
             transition: transform 0.2s, box-shadow 0.2s;
             display: block;
+            border-left: 4px solid #42A5F5;
         }
 
         .link-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 100, 0.15);
         }
 
         .link-title {
             font-size: 1.4em;
             font-weight: bold;
-            color: #4CAF50;
+            color: #1565C0;
             margin-bottom: 10px;
         }
 
@@ -83,8 +84,8 @@
 
 <body>
     <header>
-        <h1>シンプル体重管理アプリ</h1>
-        <div class="subtitle">毎日の体重記録をシンプルに、楽しく。</div>
+        <h1>DietGraph</h1>
+        <div class="subtitle">グラフにこだわった体重管理アプリ</div>
     </header>
 
     <div class="container">
@@ -100,15 +101,15 @@
             </a>
 
             <a href="support.html" class="link-card">
-                <div class="link-title">📮 サポート・お問い合わせ</div>
-                <div class="link-description">不具合の報告やご要望はこちらからお願いします。</div>
+                <div class="link-title">❓ よくある質問（FAQ）</div>
+                <div class="link-description">よくいただくご質問と回答をまとめています。</div>
             </a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Itoshin Tech. All rights reserved.</p>
-        <p style="font-size: 0.8em; color: #ccc;">Last Updated: 2026-02-11</p>
+        <p>&copy; 2026 Shonan Craft Club. All rights reserved.</p>
+        <p style="font-size: 0.8em; color: #ccc;">Last Updated: 2026-02-22</p>
     </footer>
 </body>
 
