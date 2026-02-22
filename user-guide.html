@@ -103,6 +103,64 @@
         li {
             margin-bottom: 8px;
         }
+
+        /* スクリーンショット用スタイル */
+        .screenshot {
+            display: block;
+            max-width: 320px;
+            width: 100%;
+            margin: 20px auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 100, 0.15);
+            border: 1px solid #d0daea;
+        }
+
+        .screenshot-wide {
+            display: block;
+            max-width: 600px;
+            width: 100%;
+            margin: 20px auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 100, 0.15);
+            border: 1px solid #d0daea;
+        }
+
+        .screenshot-caption {
+            text-align: center;
+            font-size: 0.85em;
+            color: #888;
+            margin-top: -12px;
+            margin-bottom: 20px;
+        }
+
+        .screenshots-row {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .screenshots-row figure {
+            margin: 0;
+            flex: 1 1 200px;
+            max-width: 260px;
+        }
+
+        .screenshots-row img {
+            display: block;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 100, 0.15);
+            border: 1px solid #d0daea;
+        }
+
+        .screenshots-row figcaption {
+            text-align: center;
+            font-size: 0.82em;
+            color: #888;
+            margin-top: 6px;
+        }
     </style>
 </head>
 
@@ -111,48 +169,90 @@
 
         <h1>📖 使い方ガイド</h1>
 
+        <!-- アプリ全体の紹介画像 -->
+        <img src="images/DietGraph_Feature.png" alt="DietGraph 主な機能" class="screenshot-wide">
+        <p class="screenshot-caption">DietGraph の主な機能</p>
+
         <h2>体重の記録方法</h2>
         <div class="step">
             <span class="step-number">1</span>
             <strong>体重を入力</strong><br>
-            下部メニューの「入力」タブを開き、ドラムロール（スクロール）で今日の体重を選択して「保存」ボタンを押してください。
+            下部メニューの「入力」タブを開き、ドラムロール（スクロール）で今日の体重を選択して「入力」ボタンを押してください。
         </div>
+
+        <!-- 入力画面スクリーンショット -->
+        <img src="images/01Input.png" alt="入力画面" class="screenshot">
+        <p class="screenshot-caption">▲ 入力画面</p>
 
         <div class="step">
             <span class="step-number">2</span>
             <strong>イベントを記録</strong><br>
-            食事・運動・飲み会などのイベントをタップして記録できます。グラフ上にも表示され、体重増減の原因が分かりやすくなります。
+            食事・運動制限・お通じのイベントをタップして記録できます。
+            イベントを記録すると、グラフ上にも表示することができ、体重増減の原因が分かりやすくなります。
+            イベントの内容やアイコンは、設定から変更することができます。
         </div>
 
         <div class="step">
             <span class="step-number">3</span>
             <strong>メモを残す</strong><br>
-            その日の出来事や気づきをメモとして入力できます。カレンダー画面でも確認できます。
+            その日に食べた物や達成できたことなどをメモとして残すことができます。
+            このメモはカレンダーで表示されます。カレンダーから変更することもできます。
         </div>
 
         <h2>グラフで推移を確認</h2>
         <p>記録したデータは自動的にグラフ化されます。</p>
         <ul>
-            <li><strong>ズーム操作：</strong> グラフをピンチイン・ピンチアウトして、表示期間を調整できます。</li>
-            <li><strong>目標ライン：</strong> 上限体重・目標体重が点線で表示され、進捗が一目で分かります。</li>
-            <li><strong>縦軸モード：</strong> グラフ左上のボタンで縦軸の範囲を「自動／固定」に切り替えられます。</li>
-            <li><strong>グラフ線の種類：</strong> グラフ右上のボタンで「滑らか／直線」に切り替えられます。</li>
+            <li><strong>ズーム：</strong> （1週間）（1カ月）（3カ月）（全期間）のボタンで表示する範囲を切り替えます。</li>
+            <li><strong>表示期間の移動：</strong> グラフを横にスワイプして表示期間を動かします。</li>
+            <li><strong>上限・目標体重の変更：</strong> 上限・目標と書かれた点線の右の四角いアイコンをドラッグして値を変更します。</li>
+            <li><strong>縦軸の範囲の固定/自動：</strong> グラフ左上のボタンで「自動／固定」に切り替えます。</li>
+            <li><strong>グラフ線の直線/滑らか：</strong> グラフ右上のボタンで「滑らか／直線」に切り替えます。</li>
+            <li><strong>イベントの表示/非表示：</strong> グラフ下のイベントのアイコンのボタンで「表示／非表示」に切り替えます。</li>
         </ul>
 
-        <div class="tip">
-            <div class="tip-title">💡 上限体重・目標体重の変更方法</div>
-            グラフ画面のラインを上下にドラッグすることで変更できます。
+        <!-- グラフ画面スクリーンショット（2枚を横並び） -->
+        <div class="screenshots-row">
+            <figure>
+                <img src="images/02Graph.png" alt="グラフ画面（通常）">
+                <figcaption>▲ グラフ画面（1週間で、食事制限のイベント表示）</figcaption>
+            </figure>
+            <figure>
+                <img src="images/03Graph.png" alt="グラフ画面（長期）">
+                <figcaption>▲ グラフ画面（3カ月で、食事制限のイベント表示）</figcaption>
+            </figure>
         </div>
 
         <h2>カレンダー機能</h2>
         <p>カレンダー画面では、月ごとの記録状況を確認できます。</p>
         <ul>
             <li>日付の背景色で体重の状態が分かります（赤：上限超え、青：目標達成、黄：その間）</li>
-            <li>日付をタップするとその日の記録を修正できます。</li>
-            <li>イベントスタンプが表示され、生活習慣と体重の関係を振り返るのに便利です。</li>
+            <li>日付をタップするとその日の記録を、下の情報表示パネルから修正できます。</li>
+            <li>イベントやメモが表示され、体重の増減の原因や傾向を振り返るのに便利です。</li>
         </ul>
 
+        <!-- カレンダー画面スクリーンショット -->
+        <img src="images/04Calendear.png" alt="カレンダー画面" class="screenshot">
+        <p class="screenshot-caption">▲ カレンダー画面</p>
+
         <h2>⚙️ データ管理と設定</h2>
+
+        <p>設定画面では、イベントの設定や、振動設定、データ管理ができます。</p>
+        <ul>
+            <li><strong>広告の非表示</strong> 広告の非表示ができます。</li>
+            <li><strong>イベント設定</strong> イベントのアイコンやラベルを変更できます。</li>
+            <li><strong>一般設定</strong> ボタンを押したときの振動の有無を変更できます。</li>
+            <li><strong>データ管理</strong> データのバックアップと復元、データの消去ができます。</li>
+        </ul>
+
+        <!-- 設定画面スクリーンショット -->
+
+
+        <div class="screenshots-row">
+            <figure>
+                <img src="images/05Settings.png" alt="設定画面">
+                <figcaption>▲ 設定画面</figcaption>
+            </figure>
+        </div>
 
         <h2>Pro版（有料機能）について</h2>
         <div class="feature-box">
